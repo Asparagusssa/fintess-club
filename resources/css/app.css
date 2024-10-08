@@ -1,3 +1,37 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+:root {
+    background-color: #F5F5F5;
+    scrollbar-gutter: auto;
+}
+
+.btn-primary, .btn-secondary {
+    @apply text-base-100;
+}
+
+nav a {
+    @apply hover:text-primary/70;
+}
+
+.checkbox-secondary {
+    --chkfg: #F5F5F5;
+}
+
+@media (hover: hover) and (pointer: fine) {
+    :root:has(:is(.modal-open, .modal:target, .modal-toggle:checked + .modal, .modal[open])) {
+        @apply overflow-hidden;
+        scrollbar-gutter: auto;
+        padding-right: 15px
+    }
+}
+
+@media (hover: none) and (pointer: coarse) {
+    :root:has(:is(.modal-open, .modal:target, .modal-toggle:checked + .modal, .modal[open])) {
+        @apply overflow-hidden;
+        scrollbar-gutter: auto;
+
+    }
+}
+
