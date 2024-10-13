@@ -9,7 +9,7 @@
         <div class="flex items-center justify-center w-full h-full"><img
                 class="h-80 w-80"
                 src="http://qrcoder.ru/code/?%C8%E2%E0%ED+%D7%F3%EA%E0%E2%E8%ED&4&0"
-                title="QR код"></div>
+                title="QR код" alt="qrcode"></div>
 
 
     </div>
