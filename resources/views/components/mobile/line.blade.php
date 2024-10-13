@@ -1,1 +1,1 @@
-<div class="h-[2px] w-full bg-white my-[5px]"></div>
+<div {{ $attributes->merge(['class' => 'w-full my-[5px]']) }}></div>

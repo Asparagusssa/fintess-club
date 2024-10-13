@@ -17,7 +17,7 @@ class RegisteredUserController extends Controller
         $attr = $request->validated();
 
         $user = User::create($attr);
-        Auth::login($user);
+        Auth::login($user, $request->remember ?? false);
 
         return redirect()->route('home');
     }

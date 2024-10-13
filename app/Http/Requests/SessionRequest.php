@@ -23,16 +23,19 @@ class SessionRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'email' => ['required', 'email', 'max:254'],
-            'password' => ['required', Password::min(6)->max(254)->numbers()->letters()],
+            'login_email' => ['required', 'email', 'max:254'],
+            'login_password' => ['required', Password::min(6)->max(254)->numbers()->letters()],
         ];
     }
 
-    public function prepareForValidation() : void
+    public function validated($key = null, $default = null)
     {
-        $this->merge([
-            'email' => $this->input('login_email'),
-            'password' => $this->input('login_password'),
-        ]);
+        $validatedData = parent::validated($key, $default);
+        $validatedData['email'] = $validatedData['login_email'];
+        $validatedData['password'] = $validatedData['login_password'];
+        unset($validatedData['login_email'], $validatedData['login_password']);
+        return $validatedData;
     }
+
+
 }

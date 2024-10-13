@@ -2,6 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+    font-family: "Rubik";
+    src: url("../fonts/Rubik-VariableFont_wght.ttf") format("truetype");
+}
+
 :root {
     background-color: #F5F5F5;
     scrollbar-gutter: auto;
@@ -11,8 +16,14 @@
     @apply text-base-100;
 }
 
-nav a {
-    @apply hover:text-primary/70;
+.font-bold {
+    font-weight: 500;
+}
+
+.text-overflow-ellipsis {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .checkbox-secondary {

@@ -1,5 +1,5 @@
 const checkbox = document.getElementById('hamburger');
-const menu = document.getElementById('menu');
+const menu = document.getElementById('mobileMenu');
 const mobileCheckbox = document.getElementById('mobile-hamburger');
 const root = document.documentElement;
 
@@ -15,5 +15,5 @@ mobileCheckbox.addEventListener('change', () => {
     menu.classList.toggle('left-0');
     checkbox.checked = false;
     root.classList.toggle('overflow-y-hidden');
-    
+
 })
