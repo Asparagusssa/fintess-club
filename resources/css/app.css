@@ -34,7 +34,7 @@
     :root:has(:is(.modal-open, .modal:target, .modal-toggle:checked + .modal, .modal[open])) {
         @apply overflow-hidden;
         scrollbar-gutter: auto;
-        padding-right: 15px
+        padding-right: 15px;
     }
 }
 
@@ -42,7 +42,6 @@
     :root:has(:is(.modal-open, .modal:target, .modal-toggle:checked + .modal, .modal[open])) {
         @apply overflow-hidden;
         scrollbar-gutter: auto;
-
     }
 }
 
