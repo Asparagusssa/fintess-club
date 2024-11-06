@@ -23,7 +23,7 @@
         </div>
     @endguest
     @auth
-        <x-profile-side-menu/>
+        <x-profile.side-menu/>
     @endauth
     <div class="flex justify-end xl:hidden">
         <label class="btn btn-circle swap swap-rotate bg-transparent shadow-transparent border-0 h-auto min-h-0">

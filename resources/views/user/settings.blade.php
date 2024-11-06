@@ -1,3 +1,3 @@
 <x-user-layout>
-секции
+    Настройки
 </x-user-layout>

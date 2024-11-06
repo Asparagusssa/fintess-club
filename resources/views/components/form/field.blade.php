@@ -1,5 +1,5 @@
 @props(['name' => ''])
-<div>
+<div {{ $attributes }}>
     <label class="input focus:outline-secondary focus-within:outline-secondary input-bordered bg-white flex items-center gap-2">
         {{ $slot }}
     </label>

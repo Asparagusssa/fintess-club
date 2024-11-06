@@ -4,7 +4,7 @@
 <x-layout.head/>
 
 <body class="bg-base-100 text-text min-h-screen font-rubik">
-    <div class="px-10">
+    <div class="md:px-10 px-5">
         <x-layout.header/>
         <main class="mt-24 max-w-[986px] mx-auto text-balance">
             {{ $slot }}

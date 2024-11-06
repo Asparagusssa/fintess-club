@@ -6,7 +6,7 @@
             <button class="btn btn-sm btn-circle btn-ghost absolute right-[1rem] top-[1rem] focus-visible:outline-0">✕
             </button>
         </form>
-        <x-form.form id="register" method="POST" action="/register">
+        <x-form.form id="register" class="space-y-4" method="POST" action="/register">
             <x-form.field name="name">
                 <img class="h-4 w-4 opacity-60" src="{{ Vite::asset('/resources/images/svg/person.svg') }}" alt="person">
                 <x-form.input value="{{ old('name') }}" name="name" type="text" placeholder="Имя" required/>
@@ -46,7 +46,7 @@
 
             <x-form.checkbox name="remember" id="rememberAuth">Запомнить меня</x-form.checkbox>
 
-            <x-form.button>Зарегистрироваться</x-form.button>
+            <x-form.button class="btn btn-primary w-full text-lg">Зарегистрироваться</x-form.button>
         </x-form.form>
 
         <p>Уже есть аккаунт? <a id="openLoginModal" class="link link-primary open-modal" onclick="loginModal.showModal()">Войти</a></p>

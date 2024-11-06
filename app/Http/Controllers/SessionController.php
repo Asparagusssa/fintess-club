@@ -3,13 +3,18 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests\SessionRequest;
-use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Validation\ValidationException;
 
 class SessionController extends Controller
 {
+
+    public function create()
+    {
+        return redirect()->route('home');
+    }
+
     public function store(SessionRequest $request)
     {
         $attr = $request->validated();
@@ -21,7 +26,7 @@ class SessionController extends Controller
         }
 
         $request->session()->regenerate();
-        return redirect()->route('home');
+        return redirect()->route('user.profile');
 
     }
 
@@ -35,4 +40,6 @@ class SessionController extends Controller
 
         return redirect()->route('home');
     }
+
+
 }

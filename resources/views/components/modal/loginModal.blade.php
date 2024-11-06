@@ -6,7 +6,7 @@
             <button class="btn btn-sm btn-circle btn-ghost absolute right-[1rem] top-[1rem] focus-visible:outline-0">✕
             </button>
         </form>
-        <x-form.form method="POST" action="/login">
+        <x-form.form class="space-y-4" method="POST" action="{{ route('login') }}">
 
             <x-form.field name="login_email">
                 <img class="h-4 w-4 opacity-60" src="{{ Vite::asset('/resources/images/svg/email.svg') }}" alt="email">
@@ -18,8 +18,11 @@
                 <x-form.input name="login_password" type="password" placeholder="Пароль" required/>
             </x-form.field>
 
-            <x-form.checkbox name="remember" id="rememberLogin">Запомнить меня</x-form.checkbox>
-            <x-form.button>Войти</x-form.button>
+            <div class="flex justify-between">
+                <x-form.checkbox name="remember" id="rememberLogin">Запомнить меня</x-form.checkbox>
+                <a class="link link-primary" href="#">Забыли пароль?</a>
+            </div>
+            <x-form.button class="btn btn-primary w-full text-lg">Войти</x-form.button>
         </x-form.form>
 
         <p>Еще нет аккаунта? <a class="link link-primary open-modal" onclick="authModal.showModal()">Зарегистрироваться</a></p>

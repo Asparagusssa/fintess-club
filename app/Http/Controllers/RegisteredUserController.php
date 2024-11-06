@@ -19,6 +19,8 @@ class RegisteredUserController extends Controller
         $user = User::create($attr);
         Auth::login($user, $request->remember ?? false);
 
-        return redirect()->route('home');
+        Auth::user()->balance()->create();
+
+        return redirect()->route('user.profile');
     }
 }

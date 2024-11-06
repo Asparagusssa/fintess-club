@@ -1,4 +1,4 @@
-<form {{ $attributes->merge(['class' => 'space-y-4']) }}>
+<form {{ $attributes }}>
 @csrf
     {{ $slot }}
 </form>
