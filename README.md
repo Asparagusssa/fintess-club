@@ -8,7 +8,7 @@
 
 ### 1. Клонируйте репозиторий к себе на компьютер и перейдите в него: 
 ```bash
-git clone https://github.com/Asparagusssa/fintess-club.git
+git clone https://github.com/Asparagusssa/fitness-club.git
 ```
 ```bash
 cd fitness-club
@@ -30,8 +30,10 @@ php artisan key:generate
 ```bash
 php artisan migrate --seed
 ``` 
-### 6. Запустите проект на вашем локальном компьютере: 
+### 6. Запустите проект на вашем локальном компьютере (Вводите в разных окнах терминала): 
 ```bash
 php artisan serve
+```
+```bash
 npm run dev
 ```
