@@ -37,6 +37,6 @@ class BalanceController extends Controller
 
 
 
-        return redirect()->back()->with('success', 'Пополнение на ' . $request->amount . ' ₽ прошло успешно');
+        return redirect()->route('user.wallet')->with('success', 'Пополнение на ' . $request->amount . ' ₽ прошло успешно');
     }
 }

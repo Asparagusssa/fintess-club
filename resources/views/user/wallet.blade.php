@@ -1,7 +1,7 @@
 <x-user-layout>
     @if(session()->has('success'))
-        <div class="max-w-lg mx-auto">
-            <div class="bg-success p-3 rounded-xl mb-5 text-center">
+        <div class="w-full">
+            <div class="bg-success text-white font-bold shadow-md p-3 rounded-xl mb-5 text-center">
                 {{ session('success') }}
             </div>
         </div>
@@ -12,7 +12,7 @@
                 <p class="">Пополнение баланса</p>
                 <x-form.field name="amount" class="">
                     <img class="h-4 w-4 opacity-60" src="{{ Vite::asset('/resources/images/svg/person.svg') }}" alt="key">
-                    <x-form.input type="number" name="amount" placeholder="Сумма" required />
+                    <x-form.input type="number" name="amount" placeholder="Сумма" value="{{ old('amount') }}" required />
                 </x-form.field>
                 <x-form.button class="btn btn-secondary w-full">Пополнить баланс</x-form.button>
             </x-form.form>
